@@ -1,35 +1,6 @@
 {
- "createurs": [
-  {
-   "mods": 2,
-   "nom": "Essai",
-   "pages": [
-    "https://patreon.com/essai"
-   ]
-  }
- ],
+ "createurs": [],
  "format": 1,
- "mis_a_jour": "2026-11-25T04:21:11Z",
- "mods": [
-  {
-   "createur": "Essai",
-   "empreinte": "1111111111111111111111111111111111111111111111111111111111111111",
-   "genre": "script",
-   "liens": [],
-   "nom": "Mod essai",
-   "relie_a": null,
-   "source": "https://patreon.com/essai/posts/mod-essai-123",
-   "vu": 1
-  },
-  {
-   "createur": "Essai",
-   "empreinte": "2222222222222222222222222222222222222222222222222222222222222222",
-   "genre": "mod",
-   "liens": [],
-   "nom": "Mod essai traduction FR",
-   "relie_a": "1111111111111111111111111111111111111111111111111111111111111111",
-   "source": "https://patreon.com/essai/posts/mod-essai-123",
-   "vu": 1
-  }
- ]
+ "mis_a_jour": "2026-11-25T00:00:00Z",
+ "mods": []
 }
