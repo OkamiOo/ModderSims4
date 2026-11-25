@@ -1,0 +1,25 @@
+# Entrées refusées dans le catalogue.
+# Une règle par ligne, les lignes qui commencent par # sont ignorées.
+#
+#   motif: <expression régulière>   testée sur le nom du mod et sur ses adresses, sans tenir compte de la casse
+#   domaine: <nom de domaine>       refuse ce domaine et ses sous-domaines
+#
+# Une entrée qui correspond est ignorée, le reste de la liste est gardé.
+
+# Copies piratées et contournements
+motif: \bcrack(s|ed|ée?s?)?\b
+motif: \bkeygens?\b
+motif: \bwarez\b
+motif: \bnulled\b
+motif: \brepack(s|ed)?\b
+motif: \btorrents?\b
+motif: \bpiratage\b
+motif: \bpiratée?s?\b
+
+# Déverrouillage des packs payants
+motif: \bunlocker\b
+motif: \bdlc[\s_-]*unlock\w*
+motif: \bunlock(ed)?[\s_-]*(all[\s_-]*)?(dlcs?|packs?)\b
+motif: \bdéverrouill\w*[\s_-]*(des[\s_-]*|les[\s_-]*|tous[\s_-]*les[\s_-]*)?(dlcs?|packs?)\b
+
+# domaine: exemple.invalid

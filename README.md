@@ -28,6 +28,14 @@ et lance `ModderSims4.exe`. Rien à installer. Windows 10 ou 11.
 Les nouvelles versions s'affichent à l'ouverture de l'appli, s'installent toutes seules et l'appli
 se relance.
 
+## Catalogue des mods
+
+Avec « Partager ma liste de mods », chacun peut ajouter ses mods au
+[catalogue](https://okamioo.github.io/ModderSims4/) : le nom, le créateur et la page d'origine,
+jamais les fichiers. L'appli s'en sert pour reconnaître les mods et retrouver leur source. Les
+bugs signalés depuis l'appli arrivent dans les [issues](../../issues), sans ton nom d'utilisateur
+ni celui de ton PC.
+
 ## Licence
 
 Gratuit, partage libre, pas de revente : voir [LICENCE.txt](LICENCE.txt).

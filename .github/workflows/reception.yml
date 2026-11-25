@@ -1,0 +1,58 @@
+name: Réception des issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# Une seule exécution à la fois : le catalogue est modifié par un seul script.
+concurrency:
+  group: catalogue
+  cancel-in-progress: false
+
+jobs:
+  reception:
+    if: github.event.issue.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Scripts
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: .github
+          persist-credentials: false
+
+      - name: Branche catalogue
+        uses: actions/checkout@v4
+        with:
+          ref: catalogue
+          path: catalogue
+
+      # Le titre et le corps de l'issue sont lus par le script dans GITHUB_EVENT_PATH,
+      # jamais recopiés dans une commande.
+      - name: Lecture de l'issue
+        id: reception
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          CATALOGUE: catalogue
+        run: python3 -I .github/scripts/reception.py
+
+      - name: Enregistrement du catalogue
+        working-directory: catalogue
+        env:
+          MESSAGE: ${{ steps.reception.outputs.message }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Catalogue inchangé."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "${MESSAGE:-Catalogue : mise à jour}"
+          git push -q origin HEAD:catalogue
