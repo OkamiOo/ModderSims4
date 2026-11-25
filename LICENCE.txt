@@ -1,0 +1,22 @@
+Modder Sims4 : licence d'utilisation
+
+Modder Sims4 est un logiciel gratuit d'Oka.
+
+1. Vous pouvez utiliser Modder Sims4 gratuitement et le donner à qui vous voulez, à condition de
+   le donner gratuitement et tel quel : le dossier complet, avec ce texte, le LISEZMOI et le
+   dossier LICENCES.
+
+2. Vous ne pouvez pas vendre Modder Sims4, le louer, ni le proposer contre un paiement, seul ou
+   avec autre chose.
+
+3. Le code de Modder Sims4 n'est pas publié. Il est interdit de le décompiler ou de le modifier,
+   sauf dans la mesure où la loi ou les licences des composants le permettent.
+
+4. Modder Sims4 est fourni tel quel, sans garantie. Il déplace, met à jour et supprime des
+   fichiers de mods à votre demande : gardez une copie de ce qui compte.
+
+5. Modder Sims4 n'est ni produit ni approuvé par Electronic Arts ou Maxis. Les Sims est une
+   marque d'Electronic Arts Inc. Les mods restent la propriété de leurs créateurs.
+
+Les bibliothèques libres utilisées par Modder Sims4 gardent leurs propres licences : voir le
+dossier LICENCES.
